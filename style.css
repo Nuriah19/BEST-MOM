@@ -1,0 +1,29 @@
+* *{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "Astoria";
+    src: url("fonts/astoria_2/Astoria.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --cream:#fff7f5;
+    --blush:#f8dde5;
+    --rose:#eba8bc;
+    --berry:#b85c78;
+    --plum:#713b52;
+}
+
+
+
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: var(--blush6);
+    color: var(--plum)
+}
+
