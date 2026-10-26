@@ -17,13 +17,100 @@
     --berry:#b85c78;
     --plum:#713b52;
 }
-
-
-
-
 body{
     font-family: Arial, sans-serif;
-    background-color: var(--blush6);
-    color: var(--plum)
+    background-color: var(--blush);
+    color: var(--plum);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height :100vh ;
+    padding:2rem 1 rem;
 }
+header{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+header .subtitle{
+font-size: 0.9rem;
+letter-spacing: 1px;
+color:var(--berry);
+font-weight: 700;
+}
+header h1{
+    font-family: Georgia,serif;
+    color: var(--plum);
+    font-size: 2.2rem;
+    margin-top: 0.3rem;
+}
+.container{
+    width:100%;
+    max-width: 580px;
+}
+/* CARD SWITCHING LOGIC */
+.card{
+    /* display: none; */
+    background:var(--cream) ;
+    border-radius: 24px;
+    padding:2.5rem 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: 1px solid rgba(235,168 188,0.3);
+    animation: fadeIn 0.4s ease-in-out;
+}
+.active-card{
+    display: block;
+}
+@keyframes fadeIn{
+    from{opacity:0; transform: translateY(8px);}
+    to{opacity: 1; transform: translateY(0);}
+}
+.badge{
+    display:inline-block;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--berry);
+    background: rgba(235,168 188,0.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+.badge-result{
+    font-size:0.8rem;
+    letter-spacing: 2px;
+    color: var(--berry);
+    font-weight: 800;
+}
+h2 ,h3{
+    font-family:'Arial', sans-serif;
+    color: var(--plum);
+    margin-bottom: 1rem;
+}
+h2{font-size: 2rem;}
+h3{font-size: 1.5rem;}
 
+.hero-title{
+    font-size: 2.5rem;
+    margin: 0.8rem 0;
+    color:var(--plum);
+}
+p{
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color:#5a3243;
+}
+/* BUTTONS */
+.btn-group{
+    display:flex;
+    gap:10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn-group-vertical{
+    display:flex;
+    flex-direction: column;
+    gap:12px;
+    
+}

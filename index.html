@@ -11,76 +11,107 @@
 </head>
 <body>
 
-<header>
+<header class="header">
+    <span class="subtitle">❤️For Mummy</span>
     <h1>A little suprise for Mum🌷</h1>
 </header>
-<main>
-<section id="welcome">
+<main class="container">
+    <!-- WELCOME CONTAINER -->
+<section id="welcome" class="active-card">
     <h2>Hey, Mum💗</h2>
     <p>I have a made this coz your the best Mummy in the world💞.<br>But before we get the suprise i would like you to answer a few questions🙈.</br></p>
-    <button id="next-button">Press <br>Here to start🫣</button>
-    <button id="next-button">Click<br> if you dont want to begin😭</button>
+    <div class="btn-group">
+    <button class="primary-btn" onclick="nextCard('q1')">Press <br>Here to start🫣</button>
+    </div>
 </section>
-</main>
-</body>
-<section class="her-life">
-
-    <main class="know-more">
+<!-- QUESTIONS-->
+<section id="q1" class="card">
 <h2>Let's talk about you a little bit👀</h2>
-<!-- MARRIAGE -->
-<div class="marriage">
+<!--  QI:MARRIAGE -->
+<span class="marriage">QUESTION 1:VERY SERIOUS QUESTION</span>
     <h3>ARE YOU MARRIED?</h3>
-    <button id="next-button">YES</button>
-    <button id="next-button">NO</button>
-</div>
-<!-- CHILDREN -->
-<div class="num-child">
-<h3>How many kid's do you have?</h3>
-<div class="answer-button">
-<button id="next-button type="submit">10🙆🏻‍♀️ (is that even possible)</button>
-<button id="next-button type="submit">none( go and do God's will😠)</button>
-<button id="next-button type="submit">6💅🏻( she looks so young and yes we all came out of her🙌🏻)</button>
-</div>
-
-<div class="fav-child">
-<h3>Whose your favourite child among?</h3>
-<div class="answer-button">
-<button id="next-button" type="submit">MULLA</button>
-<button id="next-button" type="submit">AYIDI</button>
-<button id="next-button" type="submit">NURIAH(The only right answer)</button>
-<button id="next-button "type="submit">AJU</button>
-<button id="next-button "type="submit">ZAWADI</button>
-<button id="next-button "type="submit">NEHEMA</button>
-<button id="next-button "type="submit">ALMAH</button>
-<button id="next-button "type="submit">SPENCER</button>
-</div>
-    </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="btn-group">
+  <button class="btn-option" onclick="nextCard('q2')">YES</button>
+    <button class="btn-option" onclick="nextCard('q2')">NO</button>
+    </div>
 </section>
+<!--Q1: CHILDREN -->
+<section id="q2" class="card">
+<span class="badge">QUESTION 2</span>
+<h3>How many kid's do you have?</h3>
+<div class="btn-group">
+<button class="btn-option" onclick="nextCard('q3')">4</button>
+<button class="btn-option" onclick="nextCard('q3')">6</button>
+<button class="btn-option" onclick="nextCard('q3')">10</button>
+</div>
+</section>
+
+<!-- Q3:FAVOURITE CHILD -->
+ <section id="q3" class="card">
+<span class="badge">QEUSTION 3</span>
+<h3>Whose your favourite child among?</h3>
+<div class="btn-group">
+<button class="btn-option" onclick="nextCard('q4')">MULLA</button>
+<button class="btn-option" onclick="nextCard('q4')">AYIDI</button>
+<button class="yes-button" onclick="nextCard('q4')">NURIAH</button>
+<button class="btn-option" onclick="nextCard('q4')">AJU</button>
+<button class="btn-option" onclick="nextCard('q4')"></button>
+<button class="btn-option" onclick="nextCard('q4')">NEHEMA</button>
+<button class="btn-option" onclick="nextCard('q4')">ALMAH</button>
+<button class="btn-option" onclick="nextCard('q4')">SPENCER</button>
+</div>
+ </section>
+
+<!--Q4: DESCRIPTION -->
+ <section id="q4" class="card">
+ <span class="badge">QUESTION 4</span>
+    <h3>Let's talk about your favourite child......👀</h3>
+<p>How would you describe your favourite child ???🫣</p>
+<div class="btn-group-vertical">
+    <button class="btn-option" onclick="nextCard('gallery')">💖The most beautiful and intelligent child ever</button>
+    <button class="btn-option" onclick="nextCard('gallery')">🙄 Not really....</button>
+</div>
+ </section>
+<!-- PHOTO GALLERY -->
+ <section id="gallery" class="card">
+    <h2>Favourite faces📸</h2>
+<p>A little galleryfor Mum🌷.Special Memories!</p>
+<div class="photo-grid">
+    <div class="photo-card">
+<div class="photo-placeholder">📸<span>Add Photo</span></div>
+<p class="photo-label">Mum & Dad</p>
+    </div>
+
+<div class="photo-grid">
+    <div class="photo-card">
+<div class="photo-placeholder">📸<span>Add Photo</span></div>
+<p class="photo-label">Mum being iconic</p>
+    </div>
+<div class="photo-grid">
+    <div class="photo-card">
+<div class="photo-placeholder">📸<span>Add Photo</span></div>
+<p class="photo-label">Love oh Love</p>
+    </div>
+<div class="photo-grid">
+    <div class="photo-card">
+<div class="photo-placeholder">📸<span>Add Photo</span></div>
+<p class="photo-label">Family</p>
+    </div>
+</div>
+ </section>
+ <!-- FINAL SUPRISE CARD -->
+  <section id="final-card" class="card">
+    <span class="badge-result">OFFICIAL RESULT OF YOUR QUIZ</span>
+    <h2 class="hero-title">World's Best Mummy💞</h2>
+    <p class="note-text">Thank you for being the most supportive person in the world we all love you and all your effors never go unnoticed</p>
+<p class="signature"><em>With all our love your favourite child(Nuriah) </em></p>
+<div class="btn-group">
+<button class="primary-btn" onclick="nextCard('welcome')">❤️Replay the suprise</button>
+</div>
+  </section>
+    </main>
 <footer>
-    <p>Made by your favourite child😶‍🌫️</p>
+    <p>Made by your engineer daughter🌸</p>
 </footer>
  
  <script src="script.js"></script>   
