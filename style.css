@@ -16,6 +16,7 @@
     --rose:#eba8bc;
     --berry:#b85c78;
     --plum:#713b52;
+    --white:#fff7f5;
 }
 body{
     font-family: Arial, sans-serif;
@@ -49,16 +50,18 @@ header h1{
 }
 /* CARD SWITCHING LOGIC */
 .card{
-    /* display: none; */
+     /* display: none;   */
     background:var(--cream) ;
     border-radius: 24px;
     padding:2.5rem 2rem;
-    box-shadow: var(--shadow);
+    box-shadow: 0 10px 25px rgba(113, 59, 82, 0.08);
+    max-width: 550px;
+    width: 100%;
     text-align: center;
     border: 1px solid rgba(235,168 188,0.3);
     animation: fadeIn 0.4s ease-in-out;
 }
-.active-card{
+.card.active-card{
     display: block;
 }
 @keyframes fadeIn{
@@ -112,5 +115,66 @@ p{
     display:flex;
     flex-direction: column;
     gap:12px;
-    
+}
+.btn-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(130px, 1fr));
+    gap:10px;
+}
+.btn{
+    padding: 12px 20px;
+    border-radius:30px;
+    border:none;
+    font-family: 'Nunito',sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+.primary-btn{
+     background-color: var(--plum);
+    color: #fff7f5;
+     padding: 12px 22px;
+    border-radius: 50px;
+    font-family: 'Nunito'sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2 ease;
+    margin:6px;
+}
+.primary-btn:hover{
+background-color: var(--berry);
+ transform: translateY(-2px);
+}
+.btn-option{
+    background-color: #f8dde5;
+    color:var(--plum);
+    border:2px solid var(--blush);
+    padding: 12px 22px;
+    border-radius: 50px;
+    font-family: 'Nunito'sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2 ease;
+    margin:6px;
+}
+.btn-option:hover{
+    border-color: var(--rose);
+    background-color: var(--blush);
+    transform: translateY(-2px);
+}
+/* PHOTO CALLEREY GRID */
+.photo-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap:15px;
+    margin-top: 1.5rem;
+}
+.photo-card{
+    background: var(--cream);
+    border-radius: 16px;
+    padding: 12px;
+    border: 2px dashed var(--rose);
 }
